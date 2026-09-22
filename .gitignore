@@ -1,0 +1,21 @@
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+.venv/
+.pytest_cache/
+.DS_Store
+
+# Data & Large Volumes
+*.nii
+*.nii.gz
+raw_data/
+processed_data/
+augmented_buffer/
+*.npy
+
+# Model Checkpoints & Large Artifacts
+artifacts/checkpoints/*.h5
+artifacts/logs/*.csv

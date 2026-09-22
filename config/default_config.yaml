@@ -1,0 +1,20 @@
+data:
+  image_size: [224, 224]
+  channels: 3
+  planes: ["sagittal", "coronal", "axial"]
+  val_ratio: 0.15
+  test_ratio: 0.20
+  crop_boundary_ratio: 0.15
+
+training:
+  batch_size: 16
+  epochs: 60
+  initial_lr: 0.001
+  decay_rate: 0.5
+  early_stopping_patience: 12
+  backbone: "inceptionv3"  # or 'vgg16'
+
+architecture:
+  dense_units: 64
+  dropout_rate: 0.5
+  num_classes: 2
