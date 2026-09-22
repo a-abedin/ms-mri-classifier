@@ -1,6 +1,6 @@
 # MS-MRI-Classifier: Multi-Planar Deep Transfer Learning for Multiple Sclerosis Lesion Detection
 
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](#)
+[![Tests](https://github.com/a-abedin/ms-mri-classifier/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/a-abedin/ms-mri-classifier/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue.svg)](#)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://tensorflow.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
