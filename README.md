@@ -9,7 +9,7 @@ An end-to-end deep learning diagnostic pipeline for automated detection of Multi
 
 ---
 
-## Key Engineering & Clinical Highlights
+## 🔬 Key Engineering & Clinical Highlights
 
 * **Patient-Level Data Partitioning (Leakage-Free):** Slices are partitioned strictly at the patient/participant level before extraction, preventing identical brain morphology from leaking across training and evaluation splits.
 * **Multi-Planar Volumetric Sampling:** Volumetric extraction across **Axial**, **Coronal**, and **Sagittal** anatomical planes, coupled with adaptive 15–20% boundary-slice exclusion to remove non-brain cranial margins.
@@ -19,7 +19,7 @@ An end-to-end deep learning diagnostic pipeline for automated detection of Multi
 
 ---
 
-## Experimental Benchmark Results
+## 📊 Experimental Benchmark Results
 
 ### 1. Multi-Planar Analysis (Sagittal + Coronal + Axial)
 Evaluated across 78,000+ balanced multi-view slices with patient-level separation:
@@ -41,7 +41,24 @@ Comparative assessment on Sagittal sequences showing model viability even when c
 
 ---
 
-## Repository Structure
+## 📈 Visual Performance & Training Dynamics
+
+### Training History (Loss & Accuracy Curves)
+The models utilize an **ExponentialDecay** learning rate schedule and **EarlyStopping** with patience=12 to mitigate overfitting.
+<p align="center">
+  <img src="assets/training_history.png" alt="Training History Curves" width="85%"/>
+</p>
+
+### Clinical Evaluation Artifacts
+Below are the diagnostic outputs evaluated on independent test patients:
+
+| Confusion Matrix Heatmap | ROC & Precision-Recall Curves |
+| :---: | :---: |
+| <img src="assets/confusion_matrix.png" width="100%"/> | <img src="assets/roc_curves.png" width="100%"/> |
+
+---
+
+## 📁 Repository Structure
 
 ```text
 ms-mri-classifier/
@@ -57,7 +74,7 @@ ms-mri-classifier/
 │   └── train_and_evaluate.py   # Complete training and evaluation entry point
 ├── tests/
 │   └── test_pipeline.py        # Automated Pytest suite for pipeline integrity
+├── assets/                     # Evaluation charts, confusion matrices, and diagrams
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-```
